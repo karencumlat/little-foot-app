@@ -15,8 +15,8 @@
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
 
-  <link rel="stylesheet" href="../CSS/style.css">
-  <link rel="stylesheet" href="../CSS/admin.css">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/admin.css">
 
 </head>
 
@@ -29,7 +29,7 @@
     <main class="add-new-post">
       <h1>New Post</h1>
       <div class="form-cont">
-        <form class="post-form" method="POST" action="../PHP/add-post.php">
+        <form class="post-form" method="POST" action="../php/add-post.php">
           <label for="post-title">Post Title</label>
           <input type="text" name="post-title" class="post-title" placeholder="Post Title" required />
           <label for="post-desc">Post Description</label>

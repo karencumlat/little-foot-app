@@ -1,21 +1,21 @@
 <?php session_start(); ?>
 
 <?php
-include './PHP/database.php';
+include './php/database.php';
 ?>
 <!DOCTYPE html>
 <html>
     <head>
         <title>Little Foot</title>
         <meta charset="utf-8" />
-        <link href='./CSS/style.css' rel='stylesheet'/>
+        <link href='./css/style.css' rel='stylesheet'/>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
     </head>
     <body>
         <div class="home-container">
             <div class="home-header">
                 <div>
-                    <img class='home-header-logo' src='./IMGS/LittleFootLogo.png' alt='logo' />
+                    <img class='home-header-logo' src='./imgs/LittleFootLogo.png' alt='logo' />
                     <h3>Little Foot</h3>
                 </div>
                 <div>
@@ -38,7 +38,7 @@ include './PHP/database.php';
             <div class="home-hero">
                 <h2 class="home-hero-title">Little Foot</h2>
                 <h4 class="home-hero-subTitle">The first step is hardest of all..</h4>
-                <img class='home-hero-img' src='./IMGS/hero.jpeg' alt='hero image'/>
+                <img class='home-hero-img' src='./imgs/hero.jpeg' alt='hero image'/>
                 <div class="home-hero-shade"></div>
             </div>
             <div class="home-about">
@@ -49,17 +49,17 @@ include './PHP/database.php';
                 <h2>The Three R's</h2>
                 <div class="home-icons-columns">
                     <div class='icon-column'>
-                        <img src='./IMGS/reduseIcon.png' alt='icon'/>
+                        <img src='./imgs/reduseIcon.png' alt='icon'/>
                         <h4>Reduce</h4>
                         <p>Reduce waste to help keep our oceans, skies, and land clean</p>
                     </div>
                     <div class='icon-column'>
-                            <img src='./IMGS/reuseIcon.png' alt='icon'/>
+                            <img src='./imgs/reuseIcon.png' alt='icon'/>
                             <h4>Reuse</h4>
                             <p>Reuse waste to help keep our oceans, skies, and land clean</p>
                     </div>
                     <div class='icon-column'>
-                            <img src='./IMGS/recycleIcon.png' alt='icon'/>
+                            <img src='./imgs/recycleIcon.png' alt='icon'/>
                             <h4>Recycle</h4>
                             <p>Recycle waste to help keep our oceans, skies, and land clean</p>
                     </div>
@@ -85,7 +85,7 @@ include './PHP/database.php';
               </div>
               <div class="stat">
               <?php
-                require_once('./PHP/database.php');
+                require_once('./php/database.php');
                 $sql_sum = "SELECT * FROM donation";
                 $sum = mysqli_query($conn, $sql_sum);
                 $total = 0;
@@ -110,6 +110,6 @@ include './PHP/database.php';
                 <p> &copy; Copyright Little Foot</p>
             </div>
         </div>
-        <script src='./JS/app.js'></script>
+        <script src='./js/app.js'></script>
     </body>
 </html>

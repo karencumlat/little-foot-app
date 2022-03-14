@@ -15,7 +15,7 @@ echo '<header>
   <ul class="admin-menu" id="admin-menu">
     <li><a class="admin-menu-item" href="./posts.php"><i class="fas fa-thumbtack"> All Posts</i></a></li>
     <li><a class="admin-menu-item" href="./new-post.php"><i class="fas fa-pen"> New Post</i></a></li>
-    <li><a class="admin-menu-item" href="../PHP/logout.php"><i class="fas fa-sign-out-alt"> Log Out</i></a></li>
+    <li><a class="admin-menu-item" href="../php/logout.php"><i class="fas fa-sign-out-alt"> Log Out</i></a></li>
   </ul>
 </div>
 </header>';
