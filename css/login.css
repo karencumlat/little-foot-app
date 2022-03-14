@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
+
+body {
+    height: 100%;
+    width: 100%;
+    background-color: white;
+}
+
+#imageCont {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20vh;
+}
+
+#logo {
+    height: 20vh;
+}
+.name {
+    font-family: 'Raleway';
+    font-size: 30pt;
+    text-align: center;
+    padding-top: 5vh;
+}
+
+.login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 5vh;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    font-size: 20pt;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+input {
+    background-color: white;
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.submit {
+    background-color: #66B9CC;
+    height: 45px;
+    width: 100px;
+    border: 1px solid #66B9CC;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 12px;
+    font-size: 12pt;
+}
+
+.submit:hover {
+    background-color: white;
+    height: 45px;
+    width: 100px;
+    border: 1px solid #66B9CC;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 12px;
+    transform: scale(1.1);
+    transition: 0.3s;
+    font-size: 12pt;
+}

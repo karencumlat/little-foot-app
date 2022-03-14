@@ -1,0 +1,167 @@
+*{
+  box-sizing: border-box;
+}
+
+.body{
+  color: #000000;
+  background-color: #F0F7F4;
+}
+
+.container{
+  width: 100%;
+  height: 100%;
+  padding: 2em 5em;
+}
+
+.admin-menu li{
+  display: inline;
+}
+
+a:link, a:visited{
+  text-decoration: none;
+  color: #000000;
+  padding: .5em;
+}
+
+.admin-menu-item:hover, .admin-menu-item:active{
+  background-color: #8fc548;
+  color: white;
+}
+
+header{
+  display: flex;
+  flex-direction: row;
+  justify-content:space-between;
+  align-items: center;
+}
+
+.post-header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.new-post:link, .new-post:active{
+  border: 1px solid #8fc548;
+  border-radius: .25em;
+}
+
+.new-post:hover{
+  background-color: #8fc548;
+  color: #F0F7F4;
+  border: none;
+}
+
+.posts{
+  padding: 2em;
+}
+
+.post-table{
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: .25em;
+}
+
+.post-table td{
+  border: 1px solid #F0F7F4;
+  padding: 1em;
+  border-bottom: 1px solid #5C967A;
+}
+
+.post-table tbody{
+  background-color: #f2f2f2;
+}
+
+.btn-del{
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-del i{
+  color: red;
+}
+
+.add-new-post{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 2em;
+}
+
+.form-cont{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.post-form{
+  display: flex;
+  flex-direction: column;
+  background-color: #F1F1F1;
+  padding: 2em;
+  border-radius: .5em;
+  width: 100%;
+}
+
+input[type=text], textarea, input[type=email] {
+  padding: 1em 1.5em;
+  margin: 1em 0;
+  border: 1px solid #F0F7F4;
+  border-radius: .5em;
+}
+
+input[type=submit] {
+  width: 100%;
+  background-color: #8fc548;
+  color: white;
+  padding: 1em 1.5em;
+  margin: 1em 0;
+  border: none;
+  border-radius: .5em;
+  cursor: pointer;
+}
+
+.btn-publish:hover{
+  background-color: #98D14D;
+}
+
+.alert-box{
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.alert{
+  padding: .75rem 1.25rem;
+  border: 1px solid transparent;
+  border-radius: .25rem;
+  font-size: 24pt;
+}
+
+.delete{
+  color: #721c24;
+  background-color: #f8d7da;
+  border-color: #f5c6cb;
+}
+
+.insert{
+  color: #155724;
+  background-color: #d4edda;
+  border-color: #c3e6cb;
+}
+
+.total{
+  color: #8FC548;
+}
+
+.add-donation{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 5em 20em;
+}
