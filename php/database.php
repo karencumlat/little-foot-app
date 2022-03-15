@@ -1,9 +1,12 @@
 <?php
-$servername = "localhost";
-$username = "root";
-$password = "";
-$db = "littlefoot_db";
+$url = parse_url(getenv("CLEARDB_DATABASE_URL"));
+$servername = $url["host"];
+$username = $url["user"];
+$password = $url["pass"];
+$db = substr($url["path"]);
 
+$active_group = 'default';
+$query_builder = TRUE;
 // Create connection
 $conn = mysqli_connect($servername, $username, $password);
 
