@@ -23,15 +23,15 @@
 
       require_once('database.php');
 
-      $postTitle = $_POST['post-title'];
-      $postDesc = $_POST['post-desc'];
-
-      // $sql = mysqli_query($conn, "SELECT postTitle FROM users WHERE postTitle = '$postTitle' ");
-
-      $insert = "INSERT INTO post (post_title, post_desc) VALUES
-      ('$postTitle', '$postDesc')";
-
       if(isset($_POST['add-post'])){
+        $postTitle = $_POST['post-title'];
+        $postDesc = $_POST['post-desc'];
+  
+        // $sql = mysqli_query($conn, "SELECT postTitle FROM users WHERE postTitle = '$postTitle' ");
+  
+        $insert = "INSERT INTO post (post_title, post_desc) VALUES
+        ('$postTitle', '$postDesc')";
+
           if($postTitle==''||$postDesc==''){
               echo "Please input values";
           }else if(mysqli_query($conn,$insert)){
@@ -41,6 +41,9 @@
             // echo "post-title: ".$postTitle ."<br><br>";
             // echo "post-desc: ".$postDesc ."<br><br>";
             header("Refresh:1; url=../admin/posts.php");
+              }
+              else{
+                echo "err";
               }
           }
       ?>
