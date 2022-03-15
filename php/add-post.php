@@ -26,10 +26,10 @@
       $postTitle = $_POST['post-title'];
       $postDesc = $_POST['post-desc'];
 
-      $sql = mysqli_query($conn, "SELECT postTitle FROM users WHERE postTitle = '$postTitle' ");
+      // $sql = mysqli_query($conn, "SELECT postTitle FROM users WHERE postTitle = '$postTitle' ");
 
-      $insert = "INSERT INTO post (post_title, post_desc, post_deleted) VALUES
-      ('$postTitle', '$postDesc', 0)";
+      $insert = "INSERT INTO post (post_title, post_desc) VALUES
+      ('$postTitle', '$postDesc')";
 
       if(isset($_POST['add-post'])){
           if($postTitle==''||$postDesc==''){

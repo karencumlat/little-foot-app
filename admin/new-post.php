@@ -64,7 +64,7 @@
                   <textarea id="post-desc" name="post-desc" class="form-control form-text" rows="10"
                     placeholder="Post description..." required></textarea>
                 </div>
-                <input class="btn btn-primary text-uppercase " type="submit" name="new-post" value="Publish">
+                <input class="btn btn-primary text-uppercase " type="submit" name="add-post" value="Publish">
 
                 <hr />
               </form>
