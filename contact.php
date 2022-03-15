@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
   <meta name="description" content="" />
   <meta name="author" content="" />
-  <title>Little Foot - Donate</title>
+  <title>Little Foot - Contact</title>
   <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
   <!-- Font Awesome icons (free version)-->
   <script src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" crossorigin="anonymous"></script>
@@ -25,13 +25,13 @@
   <!-- Navigation-->
   <?php include './common/nav.php';?>
   <!-- Page Header-->
-  <header class="masthead" style="background-image: url('assets/img/donate-bg.jpg')">
+  <header class="masthead" style="background-image: url('assets/img/contact-bg.jpg')">
     <div class="container position-relative px-4 px-lg-5">
       <div class="row gx-4 gx-lg-5 justify-content-center">
         <div class="col-md-10 col-lg-8 col-xl-7">
           <div class="page-heading">
-            <h1>Make a Donation</h1>
-
+            <h1>Contact Us</h1>
+            <span class="subheading">Have questions? We have answers.</span>
           </div>
         </div>
       </div>
@@ -42,36 +42,26 @@
     <div class="container px-4 px-lg-5">
       <div class="row gx-4 gx-lg-5 justify-content-center">
         <div class="col-md-10 col-lg-8 col-xl-7">
-
+          <p>Want to get in touch? Fill out the form below to send me a message and I will get back to you as soon as
+            possible!</p>
           <div class="my-5">
-            <form class="post-form" method="POST" action="php/add-donation.php">
+            <form class="post-form" method="POST" action="PHP/send-msg.php">
               <div class="form-floating">
                 <input class="form-control" id='name' type="text" name="name" placeholder="Name" required />
                 <label for="name">Name</label>
               </div>
               <div class="form-floating">
-                <input class="form-control" name="card" class="card" type="tel" inputmode="numeric"
-                  pattern="[0-9\s]{13,19}" autocomplete="cc-number" maxlength="19" placeholder="xxxx xxxx xxxx xxxx"
-                  required />
-                <label for="card">Card Number</label>
+                <input class="form-control" type="email" name="email" class="email" placeholder="Email Address" />
+                <label for="email">Email</label>
               </div>
               <div class="form-floating">
-                <input class="form-control" type="text" name="cvv" class="cvv" placeholder="CVV" required minlength="3"
-                  maxlength="3" />
-                <label for="cvv">CVV</label>
-              </div>
-              <div class="form-floating">
-                <input class="form-control" type="text" name="date" class="date" placeholder="mmyy" required
-                  minlength="4" maxlength="4" />
-                <label for="date">Expiry Date</label>
-              </div>
-              <div class="form-floating">
-                <input class="form-control" type="text" name="amount" class="amount" placeholder="0.00" required />
-                <label for="amount">Donation Amount</label>
+                <textarea class="form-control" style="height: 12rem" name="msg" class="msg"
+                  placeholder="Post description..." required></textarea>
+                <label for="msg">Message</label>
               </div>
 
               <br />
-              <input class="btn btn-primary text-uppercase " type="submit" name="submit" value="Donate"
+              <input class="btn btn-primary text-uppercase " type="submit" name="send-msg" value="Send"
                 class="btn-publish">
             </form>
 
@@ -86,7 +76,11 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
   <!-- Core theme JS-->
   <script src="js/scripts.js"></script>
-
+  <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+  <!-- * *                               SB Forms JS                               * *-->
+  <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
+  <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+  <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
 </body>
 
 </html>

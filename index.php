@@ -1,115 +1,81 @@
 <?php session_start(); ?>
 
 <?php
-include './php/database.php';
+include 'php/database.php';
 ?>
+
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>Little Foot</title>
-        <meta charset="utf-8" />
-        <link href='./css/style.css' rel='stylesheet'/>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
-    </head>
-    <body>
-        <div class="home-container">
-            <div class="home-header">
-                <div>
-                    <img class='home-header-logo' src='./imgs/LittleFootLogo.png' alt='logo' />
-                    <h3>Little Foot</h3>
-                </div>
-                <div>
-                    <?php
-                    if(!isset($_SESSION['user'])){
-                      echo "<a href='index.php'>Home</a>";
-                      echo "<a href='contact-us.php'>Contact Us</a>";
+<html lang="en">
 
-                      echo "<a href='admin/login.php' class='admin-login'>Sign In</a>";
-                      // echo "<a href='admin/login.php' class='admin-login'><button class='home-header-btn'>Sign In</button></a>";
-                      echo "<span class='donate'><a href='donate.php'>DONATE</a></span>";
-                    }else{
-                        echo "<a href='admin/posts.php'>All Posts</a>";                        
-                        echo "<a href='admin/new-post.php'>Create New Post</a>";                        
-                        echo "<a href='PHP/logout.php'>Log Out</a>";
-                    }
-                    ?>
-                </div>
-            </div>
-            <div class="home-hero">
-                <h2 class="home-hero-title">Little Foot</h2>
-                <h4 class="home-hero-subTitle">The first step is hardest of all..</h4>
-                <img class='home-hero-img' src='./imgs/hero.jpeg' alt='hero image'/>
-                <div class="home-hero-shade"></div>
-            </div>
-            <div class="home-about">
-                <h2>About Little Foot</h2>
-                <p>Little Foot is a non-profit startup organization founded by Kaan Darcey, Karen Cumlat, and Luca Mattia. We had a vision of a clean and sustainable earth, and we have decided to make that vision beocme a reality. Little Foot is an organiation that helps individuals find techniques and tips to reduce their carbon footprints. One individual may not change the world by themselves but every step goes a long way. We believe that Little Foot is one small step in the right direction to save our planet. Please enjoy our articles on environmental sustainability.</p>
-            </div>
-            <div class='home-icons'>
-                <h2>The Three R's</h2>
-                <div class="home-icons-columns">
-                    <div class='icon-column'>
-                        <img src='./imgs/reduseIcon.png' alt='icon'/>
-                        <h4>Reduce</h4>
-                        <p>Reduce waste to help keep our oceans, skies, and land clean</p>
-                    </div>
-                    <div class='icon-column'>
-                            <img src='./imgs/reuseIcon.png' alt='icon'/>
-                            <h4>Reuse</h4>
-                            <p>Reuse waste to help keep our oceans, skies, and land clean</p>
-                    </div>
-                    <div class='icon-column'>
-                            <img src='./imgs/recycleIcon.png' alt='icon'/>
-                            <h4>Recycle</h4>
-                            <p>Recycle waste to help keep our oceans, skies, and land clean</p>
-                    </div>
-                </div>
-            </div>
-            <div class="home-articles">
-                <h3>Articles</h3>
-                <?php
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+  <title>Little Foot</title>
+  <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+  <!-- Font Awesome icons (free version)-->
+  <script src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" crossorigin="anonymous"></script>
+  <!-- Google fonts-->
+  <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet"
+    type="text/css" />
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800"
+    rel="stylesheet" type="text/css" />
+  <!-- Core theme CSS (includes Bootstrap)-->
+  <link href="css/styles.css" rel="stylesheet" />
+</head>
 
-                $sql = "SELECT * FROM post WHERE post_deleted = 0";
-                $return = mysqli_query($conn, $sql);
-
-                while ($row = mysqli_fetch_assoc($return)) {
-                    echo "<div class='home-post'><h4>{$row['post_title']}</h4><div class='post-descr'><p>{$row['post_desc']}</p></div></div>";
-                }
-                ?> 
-            </div>
-            <div class="stat-container">
-              <div class="stat">
-                <i class="fas fa-hands-helping"></i>
-                <h1>108</h1>
-                <span>Volunteers</span>
-              </div>
-              <div class="stat">
-              <?php
-                require_once('./php/database.php');
-                $sql_sum = "SELECT * FROM donation";
-                $sum = mysqli_query($conn, $sql_sum);
-                $total = 0;
-                while($row = mysqli_fetch_assoc($sum)){
-                    $total += $row['donation_amount'];
-                }
-                echo "<i class='fas fa-hand-holding-usd usd'></i>";
-                echo "<h1>$ $total</h1>";
-                echo "<span>Donations</span>";
-                mysqli_close($conn);
-            ?>
-              </div>
-              <div class="stat">  
-                <i class="fas fa-clock"></i>
-                <h1>3000</h1>
-                <span>Hours of Help</span>
-              </div>
-
-            </div>
-
-            <div class="footer">
-                <p> &copy; Copyright Little Foot</p>
-            </div>
+<body>
+  <?php include './common/nav.php';?>
+  <!-- Page Header-->
+  <header class="masthead" style="background-image: url('assets/img/home-bg.jpeg')">
+    <div class="container position-relative px-4 px-lg-5">
+      <div class="row gx-4 gx-lg-5 justify-content-center">
+        <div class="col-md-10 col-lg-8 col-xl-7">
+          <div class="site-heading">
+            <h1>Little Foot</h1>
+            <span class="subheading">The first step is hardest of all</span>
+          </div>
         </div>
-        <script src='./js/app.js'></script>
-    </body>
+      </div>
+    </div>
+  </header>
+  <!-- Main Content-->
+  <div class="container px-4 px-lg-5">
+    <div class="row gx-4 gx-lg-5 justify-content-center">
+      <div class="col-md-10 col-lg-8 col-xl-7">
+        <!-- Post preview-->
+        <?php
+          $sql = "SELECT * FROM post WHERE post_deleted = 0";
+          $return = mysqli_query($conn, $sql);
+          while ($row = mysqli_fetch_assoc($return)) {
+              $row_desc = substr($row['post_desc'],0,40);
+              $get_date = date_create($row['post_date']);
+              $row_date = date_format($get_date,"F d, Y");
+              echo "
+              <div class='post-preview'>
+                <a href='./post.php?id={$row['id']}'>
+                <h2 class='post-title'>{$row['post_title']}</h2>
+                <h3 class='post-subtitle'>{$row_desc}...</h3>
+                </a>
+                <p class='post-meta'>{$row_date}</p>
+              </div>
+              <hr class='my-4' />
+            ";
+            }
+        ?>
+        <!-- Pager-->
+        <!-- <div class="d-flex justify-content-end mb-4"><a class="btn btn-primary text-uppercase" href="#!">Older Posts →</a></div> -->
+      </div>
+    </div>
+  </div>
+  <!-- Footer-->
+  <?php include './common/footer.php';?>
+  <!-- Bootstrap core JS-->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Core theme JS-->
+  <script src="js/scripts.js"></script>
+</body>
+
 </html>

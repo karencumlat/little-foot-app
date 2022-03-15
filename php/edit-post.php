@@ -20,32 +20,23 @@
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
   <?php
-
       require_once('database.php');
 
-      $name = $_POST['name'];
-      $card_num= $_POST['card'];
-      $card = password_hash($card_num, PASSWORD_DEFAULT);
-      $cvv = $_POST['cvv'];
-      $date = $_POST['date'];
-      $amount = $_POST['amount'];
-
-      $insert = "INSERT INTO donation (name, card_number, cvv, expiry_date, donation_amount) VALUES
-      ('$name','$card',$cvv,$date,$amount)";
-
-      if(isset($_POST['submit'])){
-          if($name==''||$card==''||$cvv==''||$date==''||$amount==''){
-              echo "Please input values";
-          }else if(mysqli_query($conn,$insert)){
+      if(isset($_POST['post-id'])){
+          $id = $_POST['post-id'];
+          $title = $_POST['post-title'];
+          $desc = $_POST['post-desc'];
+          $sql = "UPDATE post SET post_title = '$title', post_desc='$desc' WHERE id = $id"; 
+          if(mysqli_query($conn,$sql)){
             echo "<div class='alert-box'>";
-            echo "<span class='alert insert'>Thank you for your donation</span>";
+            echo "<span class='alert edit'>Post updated.</span>";
             echo "</div>";
             // echo "post-title: ".$postTitle ."<br><br>";
             // echo "post-desc: ".$postDesc ."<br><br>";
-            header("Refresh:2; url=../index.php");
+            header("Refresh:1; url=../admin/posts.php");
               }
-          }
-      ?>
+            }
+    ?>
   <script src="" async defer></script>
 </body>
 
