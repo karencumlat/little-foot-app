@@ -16,6 +16,7 @@
           echo"<li class='nav-item'><a class='nav-link px-lg-3 py-3 py-lg-4' href='admin/login.php'>Admin</a></li>";
           echo"<li class='nav-item'><a class='nav-link px-lg-3 py-3 py-lg-4' href='donate.php'>Donate</a></li>";
         }else{
+          echo"<li class='nav-item'><a class='nav-link px-lg-3 py-3 py-lg-4' href='admin/dashboard.php'>Dashboard</a></li>";
           echo"<li class='nav-item'><a class='nav-link px-lg-3 py-3 py-lg-4' href='admin/posts.php'>All Posts</a></li>";
           echo"<li class='nav-item'><a class='nav-link px-lg-3 py-3 py-lg-4' href='admin/new-post.php'>Create Post</a></li>";
           echo"<li class='nav-item'><a class='nav-link px-lg-3 py-3 py-lg-4' href='php/logout.php'>Logout</a></li>";

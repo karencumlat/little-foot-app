@@ -45,7 +45,7 @@
           <p>Want to get in touch? Fill out the form below to send me a message and I will get back to you as soon as
             possible!</p>
           <div class="my-5">
-            <form class="post-form" method="POST" action="PHP/send-msg.php">
+            <form class="post-form" method="POST" action="./php/send-msg.php">
               <div class="form-floating">
                 <input class="form-control" id='name' type="text" name="name" placeholder="Name" required />
                 <label for="name">Name</label>

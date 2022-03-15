@@ -10,7 +10,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>SB Admin 2 - Tables</title>
+  <title>Little Foot - Create New Post</title>
 
   <!-- Custom fonts for this template -->
   <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -64,7 +64,7 @@
                   <textarea id="post-desc" name="post-desc" class="form-control form-text" rows="10"
                     placeholder="Post description..." required></textarea>
                 </div>
-                <input class="btn btn-primary btn-user btn-block" type="submit" name="submit" value="Publish" />
+                <button class='btn btn-primary btn-user btn-block' name='post-id' value={$row['id']}>Publish</button>
                 <hr />
               </form>
 

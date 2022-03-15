@@ -47,7 +47,7 @@ include 'php/database.php';
       <div class="col-md-10 col-lg-8 col-xl-7">
         <!-- Post preview-->
         <?php
-          $sql = "SELECT * FROM post WHERE post_deleted = 0";
+          $sql = "SELECT * FROM post WHERE post_deleted = 0 ORDER BY post_date DESC";
           $return = mysqli_query($conn, $sql);
           while ($row = mysqli_fetch_assoc($return)) {
               $row_desc = substr($row['post_desc'],0,40);
