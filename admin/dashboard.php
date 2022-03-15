@@ -111,7 +111,7 @@
                       </div>
                       <div class="h5 mb-0 font-weight-bold text-gray-800">
                         <?php
-                       $count_msg = "SELECT COUNT(msg) FROM contact WHERE mark_as_read = 1";
+                       $count_msg = "SELECT COUNT(msg) FROM contact WHERE mark_as_read = 0";
                        $unread = mysqli_query($conn, $count_msg);
                        $row_count = mysqli_num_rows($unread);
                        echo "$row_count";

@@ -64,7 +64,7 @@
                   <textarea id="post-desc" name="post-desc" class="form-control form-text" rows="10"
                     placeholder="Post description..." required></textarea>
                 </div>
-                <button class='btn btn-primary btn-user btn-block' name='post-id' value={$row['id']}>Publish</button>
+                <button class='btn btn-primary btn-user btn-block' name='new-post' value={$row['id']}>Publish</button>
                 <hr />
               </form>
 
