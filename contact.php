@@ -61,8 +61,7 @@
               </div>
 
               <br />
-              <input class="btn btn-primary text-uppercase " type="submit" name="send-msg" value="Send"
-                class="btn-publish">
+              <input class="btn btn-primary text-uppercase " type="submit" name="send-msg" value="Send">
             </form>
 
           </div>
