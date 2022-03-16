@@ -24,8 +24,13 @@
     <div id="content-wrapper" class="d-flex flex-column">
       <div id="content">
         <div class="container-fluid">
-          <h1 class="h3 mt-4 mb-2 text-gray-800">All Posts</h1>
+          <h1 class="h3 mt-4 mb-2 text-gray-800">Posts</h1>
           <div class="card shadow mb-4">
+            <div class='card-header text-right'>
+              <a class='nav-link' href='./new-post.php'>
+                <button class='btn btn-success btn-sm'>Create New Post</button>
+              </a>
+            </div>
             <div class="card-body">
               <div class="table-responsive">
                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">

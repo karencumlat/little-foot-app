@@ -21,12 +21,17 @@
         <li class='nav-item'>
           <a class='nav-link' href='./posts.php'>
             <i class='fas fa-folder'></i>
-            <span>All Posts</span></a>
+            <span>Posts</span></a>
         </li>
         <li class='nav-item'>
-          <a class='nav-link' href='./new-post.php'>
-          <i class='fa fa-solid fa-pen'></i>
-            <span>Create New Post</span></a>
+          <a class='nav-link' href='./messages.php'>
+          <i class='fa fa-solid fa-envelope'></i>
+            <span>Messages</span></a>
+        </li>
+        <li class='nav-item'>
+          <a class='nav-link' href='./donations.php'>
+          <i class='fa fa-solid fa-money-bill'></i>
+            <span>Donations</span></a>
         </li>
         <hr class='sidebar-divider d-none d-md-block'>
         <li class='nav-item'>
