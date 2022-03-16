@@ -13,6 +13,7 @@
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="../css/admin.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" </head>
 </head>
 
 <body>
@@ -29,7 +30,7 @@
           $sql = "UPDATE post SET post_title = '$title', post_desc='$desc' WHERE id = $id"; 
           if(mysqli_query($conn,$sql)){
             echo "<div class='alert-box'>";
-            echo "<span class='alert edit'>Post updated.</span>";
+            echo "<div class='alert alert-success' role='alert'>Post updated</div>";
             echo "</div>";
             // echo "post-title: ".$postTitle ."<br><br>";
             // echo "post-desc: ".$postDesc ."<br><br>";

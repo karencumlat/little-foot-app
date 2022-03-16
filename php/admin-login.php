@@ -13,6 +13,7 @@
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="../CSS/admin.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" </head>
 </head>
 
 <body>
@@ -40,12 +41,13 @@
               if($row == 1){
                 echo "Login successful";
                 $_SESSION['user'] = $username;
-                header("Refresh:.5; url=../index.php");
+                header("Refresh:0; url=../index.php");
               }else{
                 echo "<div class='alert-box'>";
-                echo "<span class='alert delete'>User not found. Please try again.</span>";
+                echo "<div class='alert alert-danger' role='alert'>
+                  User not found. Please try again.</div>";
                 echo "</div>";
-                header("Refresh:1; url=../admin/login.php");
+                header("Refresh:3; url=../admin/login.php");
               }
               }
           }

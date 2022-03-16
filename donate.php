@@ -9,40 +9,32 @@
   <meta name="author" content="" />
   <title>Little Foot - Donate</title>
   <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
-  <!-- Font Awesome icons (free version)-->
   <script src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" crossorigin="anonymous"></script>
-  <!-- Google fonts-->
   <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet"
     type="text/css" />
   <link
     href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800"
     rel="stylesheet" type="text/css" />
-  <!-- Core theme CSS (includes Bootstrap)-->
   <link href="css/styles.css" rel="stylesheet" />
 </head>
 
 <body>
-  <!-- Navigation-->
   <?php include './common/nav.php';?>
-  <!-- Page Header-->
   <header class="masthead" style="background-image: url('assets/img/donate-bg.jpg')">
     <div class="container position-relative px-4 px-lg-5">
       <div class="row gx-4 gx-lg-5 justify-content-center">
         <div class="col-md-10 col-lg-8 col-xl-7">
           <div class="page-heading">
             <h1>Make a Donation</h1>
-
           </div>
         </div>
       </div>
     </div>
   </header>
-  <!-- Main Content-->
   <main class="mb-4">
     <div class="container px-4 px-lg-5">
       <div class="row gx-4 gx-lg-5 justify-content-center">
         <div class="col-md-10 col-lg-8 col-xl-7">
-
           <div class="my-5">
             <form class="post-form" method="POST" action="php/add-donation.php">
               <div class="form-floating">
@@ -69,24 +61,17 @@
                 <input class="form-control" type="text" name="amount" class="amount" placeholder="0.00" required />
                 <label for="amount">Donation Amount</label>
               </div>
-
               <br />
-              <input class="btn btn-primary text-uppercase " type="submit" name="submit" value="Donate"
+              <input class="btn btn-success text-uppercase " type="submit" name="submit" value="Donate"
                 class="btn-publish">
             </form>
-
           </div>
         </div>
       </div>
     </div>
   </main>
-  <!-- Footer-->
   <?php include './common/footer.php';?>
-  <!-- Bootstrap core JS-->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-  <!-- Core theme JS-->
-  <script src="js/scripts.js"></script>
-
 </body>
 
 </html>

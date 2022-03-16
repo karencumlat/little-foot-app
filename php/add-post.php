@@ -13,6 +13,7 @@
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="../css/admin.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" </head>
 </head>
 
 <body>
@@ -36,7 +37,7 @@
               echo "Please input values";
           }else if(mysqli_query($conn,$insert)){
             echo "<div class='alert-box'>";
-            echo "<span class='alert insert'>Post published.</span>";
+            echo "<div class='alert alert-success' role='alert'>Post published</div>";
             echo "</div>";
             // echo "post-title: ".$postTitle ."<br><br>";
             // echo "post-desc: ".$postDesc ."<br><br>";

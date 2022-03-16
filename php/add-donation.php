@@ -12,6 +12,8 @@
   <title></title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymZous">
   <link rel="stylesheet" href="../css/admin.css">
 </head>
 
@@ -38,7 +40,8 @@
               echo "Please input values";
           }else if(mysqli_query($conn,$insert)){
             echo "<div class='alert-box'>";
-            echo "<span class='alert insert'>Thank you for your donation</span>";
+            echo "<div class='alert alert-success' role='alert'>
+              Thank you for your donation!</div>";
             echo "</div>";
             // echo "post-title: ".$postTitle ."<br><br>";
             // echo "post-desc: ".$postDesc ."<br><br>";
@@ -48,5 +51,6 @@
       ?>
   <script src="" async defer></script>
 </body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 
 </html>
