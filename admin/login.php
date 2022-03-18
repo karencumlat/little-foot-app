@@ -6,7 +6,7 @@
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-  <meta name="description" content="" />
+  <meta name="description" content="Little Foot is a non-profit organization helping individuals reduce their carbon footprint" />
   <meta name="author" content="" />
   <title>Little Foot - Admin Login</title>
   <link rel="icon" type="image/x-icon" href="../assets/favicon.ico" />
